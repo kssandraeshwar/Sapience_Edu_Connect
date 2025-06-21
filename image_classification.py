@@ -309,7 +309,7 @@ if __name__ == "__main__":
     # Initialize classifier
     classifier = ImageClassifier()
 
-    print("🚀 Testing with working image URLs...")
+    print(" Testing with working image URLs...")
 
     # Test with accessible image URLs
     working_urls = [
@@ -338,13 +338,13 @@ if __name__ == "__main__":
     print("HOW TO USE WITH YOUR OWN IMAGES")
     print("="*50)
     print("""
-📁 For LOCAL images, make sure files exist:
+ For LOCAL images, make sure files exist:
    classifier.classify_image("actual_image.jpg")
 
-🌐 For URL images, use direct image links:
+ For URL images, use direct image links:
    classifier.classify_image("https://example.com/image.jpg")
 
-📂 Create a folder with your images:
+ Create a folder with your images:
    import os
    image_folder = "my_images/"
    if os.path.exists(image_folder):
@@ -370,7 +370,7 @@ def download_sample_images():
         "flower.jpg": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Rosa_villosa.jpg"
     }
 
-    print("📥 Downloading sample images...")
+    print(" Downloading sample images...")
     downloaded_files = []
 
     for filename, url in sample_urls.items():
@@ -378,9 +378,9 @@ def download_sample_images():
             filepath = os.path.join("sample_images", filename)
             urllib.request.urlretrieve(url, filepath)
             downloaded_files.append(filepath)
-            print(f"✅ Downloaded: {filename}")
+            print(f" Downloaded: {filename}")
         except Exception as e:
-            print(f"❌ Failed to download {filename}: {e}")
+            print(f" Failed to download {filename}: {e}")
 
     return downloaded_files
 
