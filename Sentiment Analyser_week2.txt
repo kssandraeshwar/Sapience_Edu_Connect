@@ -1,0 +1,79 @@
+Sentiment Analysis Model Project Report
+
+
+This project developed and evaluated multiple sentiment analysis models to classify text as positive, negative, or neutral. The analysis compared machine learning approaches (Naive Bayes, Logistic Regression, SVM) against rule-based methods (TextBlob, VADER) using a balanced dataset of 100 samples. Key findings reveal that rule-based approaches significantly outperformed traditional machine learning models on this dataset, with TextBlob and VADER both achieving 83.33% accuracy compared to the best ML model (SVM) at 53.33%.
+
+ Project Objectives
+
+- Build a sentiment analysis model capable of classifying text into three categories: positive, negative, and neutral
+- Compare the performance of multiple modeling approaches
+- Analyze model accuracy and provide performance metrics
+- Identify areas for improvement and future enhancements
+
+ Dataset Description
+
+Dataset Composition:
+- Total samples: 100 sentences
+- Positive samples: 33 (33%)
+- Negative samples: 33 (33%)
+- Neutral samples: 34 (34%)
+
+
+Data Split:
+- Training set: 70 samples (70%)
+- Test set: 30 samples (30%)
+- Stratified sampling maintained class balance
+
+
+
+
+Results and Performance Analysis
+
+ Model Performance Summary
+
+| Model | Accuracy | Precision | Recall | F1-Score |
+|-------|----------|-----------|--------|----------|
+| TextBlob | 83.33% | - | - | - |
+| VADER | 83.33% | - | - | - |
+| SVM | 53.33% | 0.57 | 0.53 | 0.53 |
+| Naive Bayes | 50.00% | 0.48 | 0.50 | 0.48 |
+| Logistic Regression | 50.00% | 0.48 | 0.50 | 0.48 |
+
+Detailed Performance Metrics
+
+Best Performing ML Model (SVM):
+- Overall Accuracy: 53.33%
+- Negative Class: Precision=0.44, Recall=0.70, F1=0.54
+- Neutral Class: Precision=0.86, Recall=0.60, F1=0.71
+- Positive Class: Precision=0.43, Recall=0.30, F1=0.35
+
+Performance Observations:
+- Rule-based models significantly outperformed ML models
+- ML models showed particular difficulty with positive sentiment classification
+- Neutral class achieved the best performance across ML models
+- Low overall accuracy suggests potential data or feature engineering issues
+
+
+
+
+
+
+
+
+Libraries and Dependencies
+NLTK: Natural language processing and tokenization
+scikit-learn: Machine learning models and evaluation metrics
+TextBlob: Rule-based sentiment analysis
+pandas/numpy: Data manipulation and numerical operations
+matplotlib/seaborn: Visualization and reporting
+
+
+
+Conclusion
+
+This sentiment analysis project successfully implemented and compared multiple approaches to text sentiment classification. While the rule-based methods (TextBlob and VADER) achieved superior performance with 83.33% accuracy, the machine learning models showed room for significant improvement. The primary limiting factors were dataset size and feature engineering sophistication.
+
+The project demonstrates the importance of adequate data volume for machine learning approaches and highlights the continued relevance of well-designed rule-based systems for sentiment analysis tasks. Future work should focus on dataset expansion, advanced feature engineering, and implementation of state-of-the-art transformer-based models to achieve production-ready performance.
+
+The comprehensive evaluation framework and improvement roadmap provide a solid foundation for scaling this work to larger, more complex sentiment analysis applications in real-world scenarios.
+
