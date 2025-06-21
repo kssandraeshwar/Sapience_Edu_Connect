@@ -1,0 +1,14 @@
+Image Classification
+
+This project is a deep learning-based image classifier using MobileNetV2 and Keras. It allows classification of both local and online images, batch image evaluation, and result visualization. The model leverages ImageNet knowledge to identify a wide range of object categories.
+
+This Python-based project builds a powerful, modular, and extensible image classification system using TensorFlow’s MobileNetV2, a pre-trained deep learning model optimized for speed and accuracy.
+
+Key Features:
+ Pre-trained MobileNetV2 model (1000+ ImageNet classes)
+ Support for local files and online images
+ Top-k predictions with confidence levels
+ Visualization grid for results
+ Category grouping (animals, vehicles, fruits, etc.)
+ Tools for custom dataset evaluation (accuracy + confusion matrix)
+ Batch classification and reusability with class-based design
