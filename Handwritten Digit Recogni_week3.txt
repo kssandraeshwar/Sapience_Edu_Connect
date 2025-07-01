@@ -1,0 +1,36 @@
+CNN-Based Handwritten Digit Recognition (Summary)
+Summary
+This project uses the MNIST dataset to construct a Convolutional Neural Network (CNN) for handwritten digit recognition.
+
+
+MNIST dataset: 10,000 test and 60k training greyscale images (28 x 28 pixels)
+Numbers: 0–9
+Method of Preprocessing
+Pixel values should be normalised to [0, 1].
+Change to (28, 28, 1)
+Labels with one-hot encoding
+The Architecture of CNN
+Convolutional Blocks:
+Block 1: BatchNorm + MaxPool + Dropout + 2×Conv(32)
+Block 2: 2×Conv(64) + BatchNorm + MaxPool + Dropout
+Block 3: BatchNorm + Dropout + Conv(128)
+Dense Layers: BatchNorm + Dropout + Flatten → Dense(512) → Softmax output
+incorporates dropout for regularisation and batch normalisation.
+
+Adam is the training optimiser.
+Categorical cross-entropy is lost.
+Batch size: 128; epochs: up to 20 with early termination
+Callbacks: Reduce, EarlyStoppingLROnPlateau
+Findings
+99.0–99.4% accuracy
+Minimal overfitting because of batch norm and dropout
+Quick convergence on a GPU in about 10 to 15 minutes
+Frequently confused terms are 4↔9, 3↔8, and 5↔6.
+Important Features
+Sturdy structure with regularisation
+Training that is optimised through adaptive learning
+Assessment using a classification report, confusion matrix, and accuracy
+
+Tensorflow usage pip install Seaborn scikit-learn matplotlib
+
+Digit_recognizer.py in Python
